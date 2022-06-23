@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:poc_speech_to_text/ml_luis/luis_api.dart';
 import 'package:poc_speech_to_text/substring_highlighted.dart';
 import 'package:poc_speech_to_text/utils.dart';
 import 'package:speech_to_text/speech_to_text.dart';
@@ -75,13 +74,14 @@ class _SpeechToTestPluginState extends State<SpeechToTestPlugin> {
             });
           }
 
-          if (!isListening && text != '') {
-            String intent = await Luis.predictUserIntent(text);
-
-            setState(() {
-              userIntent = intent;
-            });
-          }
+          //TODO ML PART
+          // if (!isListening && text != '') {
+          //   String intent = await Luis.predictUserIntent(text);
+          //
+          //   setState(() {
+          //     userIntent = intent;
+          //   });
+          // }
         },
       );
 }
